@@ -18,7 +18,6 @@ import (
 // @Failure 404 {object} web.APIError "Can not find ID"
 // @Router /testapi/get-string-by-int/{some_id} [get]
 func GetStringByInt(c *gin.Context)  {
-    fmt.Println("Hello world")
     err := web.APIError{}
     fmt.Println(err)
      c.JSON(http.StatusOK, struct {
