@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	_ "github.com/NuttakitDW/gamification-platform/cmd/api/docs"
