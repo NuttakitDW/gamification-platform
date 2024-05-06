@@ -2,7 +2,7 @@ package main
 
 import (
 	_ "github.com/NuttakitDW/gamification-platform/cmd/api/docs"
-	"github.com/NuttakitDW/gamification-platform/internal/handler"
+	"github.com/NuttakitDW/gamification-platform/internal/handlers"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -15,7 +15,7 @@ import (
 func main() {
 	r := gin.New()
 
-	r.GET("/v1/api/helloworld/:name", handler.GetStringByInt)
+	r.GET("/v1/api/helloworld/:name", handlers.GetStringByInt)
 
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
